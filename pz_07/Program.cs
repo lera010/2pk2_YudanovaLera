@@ -5,37 +5,41 @@
         static void Main(string[] args)
         {
             Random rnd = new Random();
+            Console.Write("Введите количество строк в массиве: ");
+            int a = int.Parse(Console.ReadLine());//ввод количества строк пользователем
+            Console.Write("Введите количество столбцов в массиве: ");
+            int b = int.Parse(Console.ReadLine());//ввод количества столбцов пользователем
 
-            Console.Write("Введите число строк массива:");
-            int a =Convert.ToInt32(Console.ReadLine());
-            Console.Write("\nВведите число столбцов массива:");
-            int b = Convert.ToInt32(Console.ReadLine());
-            int min = Int32.MaxValue;//объявление переменной обозначающей максимальное число
-            int indexmin = 0;
-            int[,] array = new int [a, b];
-            for (int i=0; i<a; i++)
+            int[,] array = new int[a, b];//объявление массива
+
+
+            for (int i = 0; i < a; i++)
+                for (int j = 0; j < b; j++)
+                    array[i, j] = rnd.Next(-10000, 10001); //заполнение массива рандомными числами от -10000 до 10000 включительно
+
+
+            for (int i = 0; i < a; i++, Console.WriteLine())
+                for (int j = 0; j < b; j++)
+                    Console.Write(array[i, j] + "\t"); //вывод массива
+
+            int min = int.MaxValue, indexMin = 0;//объявление переменной минимума и номера строки с минимальными значениями
+
+            for (int i = 0; i < a; i++)
             {
-                for (int j=0; j<b; j++)
-                {   
-                    array [i,j] = rnd.Next(-10000,10000);
-                    Console.Write(array[i,j]+ "\t");
-                    int sum = 0;
-                    sum += array[i, j];
-                    
-                    if (sum < min)
-                    {
-                        min = sum;
-                        indexmin = i;
-                    }
+                int sum = 0; //объявление переменной суммы
+                for (int j = 0; j < b; j++)
+                    sum += array[i, j]; //нахождение суммы элементов строки
+
+                if (sum < min) //если сумма меньше минимального значения, выполняются следующие действия:
+                {
+                    min = sum;//переменной минимума присваивается значение суммы
+                    indexMin = i; //переменной присваивается число, обозначающее номер строки
                 }
-                Console.WriteLine();
             }
 
-            Console.WriteLine("Строка с минимальной суммой элементов");
+            Console.Write("Строка с минимальной суммой элементов: ");
             for (int j = 0; j < b; j++)
-            {
-                Console.Write(array[indexmin, j] + "\t");
-            }
+                Console.Write(array[indexMin, j] + " ");//вывод результата на консоль
         }
     }
 }
