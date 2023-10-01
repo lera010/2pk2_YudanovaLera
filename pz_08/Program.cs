@@ -60,6 +60,28 @@
 
 
             Console.WriteLine("Задание 5");        
+            int forFirst = 0;
+            int forMax = 0;
+            int[] max1 = new int[size];
+            int[] first = new int[size];
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                  {
+                   if (array[i][j] == first[forFirst])//если элемент первый то он меняется местами с максимальным
+                    {
+                       array[i][j] = max1[forFirst];
+                    }
+                   else if (array[i][j] == max1[forMax])//если элемент максимальный то он меняется местами с первым
+                    {
+                        array[i][j] = first[forMax];
+                    }
+                 Console.Write(array[i][j] + " ");
+                  }
+                forFirst++;//обновление
+                forMax++;//обновление
+            Console.WriteLine();//вывод
+            }
             Console.WriteLine();
 
 
@@ -67,7 +89,7 @@
 
             for (int i = 0; i < array.Length; i++)
             {
-                Array.Reverse(array[i]);//реверс строк
+                Array.Reverse(array[i]);//реверс массива
             }
             
             for (int i = 0; i < array.Length; i++)
@@ -88,10 +110,10 @@
             {
                 for (int j = 0; j < array[i].Length; j++)
                 {
-                    mid += array[i][j];
+                    mid += array[i][j]; //сумма всех элементов строки
                 }
-                mid /= array[i].Length;
-                Console.Write(Math.Round(mid, 2) +"  "); //
+                mid /= array[i].Length;//нахождение среднего значения
+                Console.Write(Math.Round(mid, 2) +"  "); //вывод с округлением 2 знака после запятой
                 mid = 0;
             }
 
