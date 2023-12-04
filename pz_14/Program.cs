@@ -33,7 +33,7 @@ namespace pz_14
             Console.WriteLine("Содержимое файла с нечетными ");
             StreamReader reader1 = new StreamReader(file1);
             string[] array1 = reader1.ReadToEnd().Split(' ');
-            for (int i = 0; i < array1.Length; i++) //массива
+            for (int i = 0; i < array1.Length; i++) //вывод массива
             {
                 Console.Write(array1[i] + " ");
             }
