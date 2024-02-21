@@ -3,7 +3,7 @@
 namespace pz_19
 {
     internal class Program
-    {
+    {   //ВАРИАНТ 6
         static void Main(string[] args)
         {
             Graduate_Student student1 = new Graduate_Student("Иван Иванов", new DateOnly(2000, 02, 08), new DateOnly(2020, 09, 01), "автомеханик", 4.6);
