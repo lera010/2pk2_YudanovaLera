@@ -22,6 +22,14 @@ namespace pz_19
             Specialization = specialization;
             GPA = gpa;
         }
+        public static bool operator > (Student a, Student b)
+        {
+            return a.Entrance > b.Entrance;
+        }
+         public static bool operator <(Student a, Student b)
+        {
+            return a.Entrance < b.Entrance;
+        }
 
         public virtual void Expulsion() 
         {

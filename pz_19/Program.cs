@@ -35,6 +35,8 @@ namespace pz_19
 
             Graduate_Student student10 = new Graduate_Student("Тургенева Мария", new DateOnly(2000, 04, 16), new DateOnly(2020, 09, 01), "реклама", 4.6);
             student10.Expulsion();
+
+            Console.WriteLine(student1 > student2);
         }
     }
 }

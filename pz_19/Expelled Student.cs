@@ -8,6 +8,7 @@ namespace pz_19
 {
     internal class Expelled_Student : Student
     {
+
         public Expelled_Student(string Name, DateOnly Birth, DateOnly Entrance, string Specialization, double GPA) : base(Name, Birth, Entrance, Specialization, GPA)
         {
         }
