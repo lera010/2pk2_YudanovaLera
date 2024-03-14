@@ -75,8 +75,7 @@ namespace Calculator
         private void ravno_Click(object sender, RoutedEventArgs e)
         {
             string expression = inputTextBlock.Text;
-            string res = Calculation(expression).ToString();
-            inputTextBlock.Text = res;
+            inputTextBlock.Text = Calculation(expression).ToString();
         }
 
         private double Calculation(string expression)

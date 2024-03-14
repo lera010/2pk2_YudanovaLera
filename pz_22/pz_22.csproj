@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\bold-text-option_icon-icons.com_73656.png" />
+    <None Remove="Icons\italic_icon-icons.com_70938.png" />
+    <None Remove="Icons\underline-text-option_icon-icons.com_70837.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\bold-text-option_icon-icons.com_73656.png" />
+    <Resource Include="Icons\italic_icon-icons.com_70938.png" />
+    <Resource Include="Icons\underline-text-option_icon-icons.com_70837.png" />
+  </ItemGroup>
+
+</Project>
